@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/19/trunk/Csv
+END
+Writer.php
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/26/trunk/Csv/Writer.php
+END
+Sniffer.php
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/25/trunk/Csv/Sniffer.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/Csv/Exception.php
+END
+Reader.php
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/25/trunk/Csv/Reader.php
+END
+Dialect.php
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/25/trunk/Csv/Dialect.php
+END

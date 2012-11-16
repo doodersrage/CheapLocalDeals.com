@@ -1,0 +1,102 @@
+# cache one cache all
+# Turn on Expires and set default expires to 3 days
+ExpiresActive On
+ExpiresDefault A259200
+ 
+# Set up caching on media files for 1 month
+<FilesMatch "\.(ico|gif|jpg|jpeg|png|flv|pdf|swf|mov|mp3|wmv|ppt)$">
+  ExpiresDefault A2419200
+  Header append Cache-Control "public"
+</FilesMatch>
+ 
+# Set up 2 Hour caching on commonly updated files
+<FilesMatch "\.(xml|txt|html|js|css)$">
+  ExpiresDefault A7200
+  Header append Cache-Control "private, must-revalidate"
+</FilesMatch>
+ 
+# Force no caching for dynamic files
+<FilesMatch "\.(php|cgi|pl|htm|deal)$">
+  ExpiresDefault A0
+  Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+  Header set Pragma "no-cache"
+</FilesMatch>
+
+#Start Rewrite Engine
+RewriteEngine On
+Options +FollowSymLinks
+RewriteBase /
+
+# prevents directory browsing
+IndexIgnore */*
+
+# non www redirect
+RewriteCond %{HTTP_HOST} ^cheaplocaldeals\.com [NC]
+RewriteRule (.*) http://www.cheaplocaldeals.com/$1 [R=301,QSA,L]
+
+#domain redirects
+RewriteCond %{HTTP_HOST} ^cheap-local-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.cheap-local-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^local-cheap-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.local-cheap-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^localcheapdeals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.localcheapdeals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^mail\.cheaplocaldeals\.com$ [NC]
+RewriteRule ^(.*)$ http://www.cheaplocaldeals.com/$1 [R=301,L]
+
+# redirects added for index consolidation
+RewriteRule ^contact_us.deal index.deal [QSA,L]
+RewriteRule ^sitemap.html index.deal [QSA,L]
+RewriteRule ^account_login_page.deal index.deal [QSA,L]
+RewriteRule ^logoff.deal index.deal [QSA,L]
+
+# redirect old privacy page
+RewriteRule ^privacy.htm /privacy-policy/ [R=301,QSA,L]
+RewriteRule ^advertiser_email_authorize.deal /advertiser_admin/advertiser_email_authorize.deal [R=301,QSA,L]
+RewriteRule ^create_advertiser_account.deal /advertiser_admin/create_advertiser_account.deal [R=301,QSA,L]
+
+# redirect used for viewing all results within a set zipcode
+RewriteRule ^view-all-results/(.*)/(.*)/ /sections/category_results.deal?view=all&city=$2 [QSA,L]
+RewriteRule ^view-all-results/ /sections/category_results.deal?view=all [QSA,L]
+
+# redirect used for deals of the month results within a set zipcode
+RewriteRule ^deals-of-the-month/(.*)/(.*)/ /sections/category_results.deal?view=all&display=dom&city=$2 [QSA,L]
+RewriteRule ^deals-of-the-month/ /sections/category_results.deal?view=all&display=dom [QSA,L]
+
+# redirect for advertiser info pages
+RewriteRule ^advertiser/(.*)/(.*)/alt-(.*)/reviews/(.*)/ /sections/reviews.deal?loc_id=$2&alt_loc_id=$3&page=$4 [QSA,L]
+RewriteRule ^advertiser/(.*)/(.*)/alt-(.*)/reviews/ /sections/reviews.deal?loc_id=$2&alt_loc_id=$3 [QSA,L]
+RewriteRule ^advertiser/(.*)/(.*)/alt-(.*)/ /sections/location_info.deal?loc_id=$2&alt_loc_id=$3 [QSA,L]
+RewriteRule ^advertiser/(.*)/(.*)/reviews/(.*)/ /sections/reviews.deal?loc_id=$2&page=$3 [QSA,L]
+RewriteRule ^advertiser/(.*)/(.*)/reviews/ /sections/reviews.deal?loc_id=$2 [QSA,L]
+RewriteRule ^advertiser/(.*)/(.*)/ /sections/location_info.deal?loc_id=$2 [QSA,L]
+
+# search friendly links for search by state pages
+RewriteRule ^sections/state_browse.deal?state=(.*)&city=(.*) /state-browse/$1/$2/ [R=301,QSA,L]
+RewriteRule ^sections/state_browse.deal?state=(.*) /state-browse/$1/ [R=301,QSA,L]
+
+RewriteCond %{THE_REQUEST} ^GET\ .*/state_browse\.(deal|php|html)\ HTTP
+RewriteRule ^(.*)state_browse\.(deal|php|html)$ /state-browse/$1 [R=301,L]
+
+RewriteRule ^state-browse/(.*)/(.*)/ /sections/state_browse.deal?state=$1&city=$2 [QSA,L]
+RewriteRule ^state-browse/(.*)/ /sections/state_browse.deal?state=$1 [QSA,L]
+RewriteRule ^state-browse/ /sections/state_browse.deal [QSA,L]
+
+# redirect used for xml sitemap
+RewriteRule ^sitemapcategories.xml xml_sitemap.php [QSA,L]
+RewriteRule ^sitemapzips.xml zip_xml_sitemap.php [QSA,L]
+RewriteRule ^search_kml.kml search_kml.deal [QSA,L]
+
+# hide php file extension
+RewriteRule ^(.*)\.deal$ $1.php [nc]
+RewriteCond %{THE_REQUEST} ^(.*)\.php\ HTTP
+RewriteRule ^(.*)\.php $1\.deal [R=301,L]
+
+# redirects index document requests back to root dir
+RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(deal|php|html)\ HTTP
+RewriteRule ^(.*)index\.(deal|php|html)$ /$1 [R=301,L]
+
+RewriteCond %{IS_SUBREQ} !=true [NC] 
+RewriteCond %{REQUEST_FILENAME}  !-f 
+RewriteCond %{REQUEST_FILENAME}  !-d 
+RewriteRule (.*) redirect.php [QSA,L,E=REDIRECT_URL:$1]

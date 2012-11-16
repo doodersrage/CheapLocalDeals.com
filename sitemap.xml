@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.google.com/schemas/sitemap/0.84">
+  <sitemap>
+    <loc>http://www.cheaplocaldeals.com/sitemaps/advertiser_sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.cheaplocaldeals.com/sitemaps/cities_sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.cheaplocaldeals.com/sitemaps/state_xml_sitemap.deal</loc>
+  </sitemap>
+</sitemapindex>

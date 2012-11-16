@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/2/trunk/tests/data
+END
+tab-200.csv
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/tests/data/tab-200.csv
+END
+comma-200.csv
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/tests/data/comma-200.csv
+END
+pipe-100.csv
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/tests/data/pipe-100.csv
+END
+blank-lines-200.csv
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/tests/data/blank-lines-200.csv
+END
+excel-formatted.csv
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/tests/data/excel-formatted.csv
+END

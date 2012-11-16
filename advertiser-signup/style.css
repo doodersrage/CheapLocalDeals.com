@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.newAdvert{
+	display:none;
+}
+#frm1{
+	display:block;
+}
+#subBtn{
+	display:none;
+}
+.frmLnks{
+	font-size:1.4em;
+}

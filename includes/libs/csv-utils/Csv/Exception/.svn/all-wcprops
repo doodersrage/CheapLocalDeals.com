@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/8/trunk/Csv/Exception
+END
+FileNotFound.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Csv/Exception/FileNotFound.php
+END
+DataSampleTooShort.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/8/trunk/Csv/Exception/DataSampleTooShort.php
+END
+CannotDetermineDialect.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/8/trunk/Csv/Exception/CannotDetermineDialect.php
+END

@@ -1,0 +1,10 @@
+body {
+behavior: url(csshover.htc);
+font-size: 100%;
+}
+
+#menu ul li {float: left; width: 100%;}
+#menu ul li a {height: 1%;} 
+
+#menu a, #menu h2 {
+}

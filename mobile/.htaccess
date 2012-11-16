@@ -1,0 +1,53 @@
+#Start Rewrite Engine
+RewriteEngine On
+Options +FollowSymLinks
+RewriteBase /mobile/
+
+# prevents directory browsing
+IndexIgnore */*
+
+# non www redirect
+RewriteCond %{HTTP_HOST} ^cheaplocaldeals\.com [NC]
+RewriteRule (.*) http://www.cheaplocaldeals.com/$1 [R=301,QSA,L]
+
+#domain redirects
+RewriteCond %{HTTP_HOST} ^cheap-local-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.cheap-local-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^local-cheap-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.local-cheap-deals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^localcheapdeals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.localcheapdeals\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^mail\.cheaplocaldeals\.com$ [NC]
+RewriteRule ^(.*)$ http://www.cheaplocaldeals.com/$1 [R=301,L]
+
+# redirect all static pages
+RewriteRule ^sitemap index.php?action=sitemap [QSA,L]
+RewriteRule ^contactus index.php?action=contactUs [QSA,L]
+RewriteRule ^aboutus index.php?action=page&pid=11 [QSA,L]
+RewriteRule ^privacy index.php?action=page&pid=2 [QSA,L]
+RewriteRule ^faq index.php?action=page&pid=10 [QSA,L]
+RewriteRule ^login index.php?action=userLogin [QSA,L]
+RewriteRule ^manageacc index.php?action=manageAcc [QSA,L]
+RewriteRule ^checkout index.php?action=checkOut [QSA,L]
+
+# redirect all state pages
+RewriteRule ^state/(.*) index.php?action=states&id=$1 [QSA,L]
+RewriteRule ^state index.php?action=states [QSA,L]
+
+# redirect all category pages
+RewriteRule ^cats/(.*)/(.*) index.php?action=catList&cid=$1&ccid=$2 [QSA,L]
+RewriteRule ^cats/(.*) index.php?action=catList&cid=$1 [QSA,L]
+
+# redirects pages
+RewriteRule ^page/(.*) index.php?action=page&pid=$1 [QSA,L]
+
+# redirect all business and advertiser pages
+RewriteRule ^altad/(.*)/(.*) index.php?page=adview&adid=$1&altadid=$2 [QSA,L]
+RewriteRule ^ad/(.*) index.php?action=adview&aid=$1 [QSA,L]
+RewriteRule ^bus/(.*) index.php?action=adview&ncid=$1 [QSA,L]
+
+# if no previous director is found send request to index page
+RewriteCond %{IS_SUBREQ} !=true [NC] 
+RewriteCond %{REQUEST_FILENAME}  !-f 
+RewriteCond %{REQUEST_FILENAME}  !-d 
+RewriteRule (.*) index.php [QSA,L,E=REDIRECT_URL:$1]

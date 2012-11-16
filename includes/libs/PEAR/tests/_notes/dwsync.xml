@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="limit.inc" server="174.36.1.100:222//var/www/html/" local="128922420180000000" remote="128922420180000000" />
+<file name="skipif.inc" server="174.36.1.100:222//var/www/html/" local="128922420220000000" remote="128922420220000000" />
+<file name="smtp_error.phpt" server="174.36.1.100:222//var/www/html/" local="128922420230000000" remote="128922420230000000" />
+<file name="db_parsedsn.phpt" server="174.36.1.100:222//var/www/html/" local="128922420150000000" remote="128922420150000000" />
+<file name="db_ismanip.phpt" server="174.36.1.100:222//var/www/html/" local="128922420150000000" remote="128922420150000000" />
+<file name="simplequery.inc" server="174.36.1.100:222//var/www/html/" local="128922420220000000" remote="128922420220000000" />
+<file name="db_error.phpt" server="174.36.1.100:222//var/www/html/" local="128922420130000000" remote="128922420130000000" />
+<file name="db_error2.phpt" server="174.36.1.100:222//var/www/html/" local="128922420140000000" remote="128922420140000000" />
+<file name="run.cvs" server="174.36.1.100:222//var/www/html/" local="128922420210000000" remote="128922420210000000" />
+<file name="fetchmodes.inc" server="174.36.1.100:222//var/www/html/" local="128922420170000000" remote="128922420170000000" />
+<file name="include.inc" server="174.36.1.100:222//var/www/html/" local="128922420180000000" remote="128922420180000000" />
+<file name="fetchmode_object.inc" server="174.36.1.100:222//var/www/html/" local="128922420180000000" remote="128922420180000000" />
+<file name="sequences.inc" server="174.36.1.100:222//var/www/html/" local="128922420210000000" remote="128922420210000000" />
+<file name="numcols.inc" server="174.36.1.100:222//var/www/html/" local="128922420190000000" remote="128922420190000000" />
+<file name="transactions.inc" server="174.36.1.100:222//var/www/html/" local="128922420230000000" remote="128922420230000000" />
+<file name="errors.inc" server="174.36.1.100:222//var/www/html/" local="128922420160000000" remote="128922420160000000" />
+<file name="db_factory.phpt" server="174.36.1.100:222//var/www/html/" local="128922420140000000" remote="128922420140000000" />
+<file name="prepexe.inc" server="174.36.1.100:222//var/www/html/" local="128922420200000000" remote="128922420200000000" />
+<file name="rfc822.phpt" server="174.36.1.100:222//var/www/html/" local="128922420200000000" remote="128922420200000000" />
+<file name="numrows.inc" server="174.36.1.100:222//var/www/html/" local="128922420190000000" remote="128922420190000000" />
+<file name="db_error.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825560000000" remote="129243831640000000" />
+<file name="db_error2.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825560000000" remote="129243831640000000" />
+<file name="db_factory.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825540000000" remote="129243831640000000" />
+<file name="db_ismanip.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825560000000" remote="129243831640000000" />
+<file name="db_parsedsn.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825560000000" remote="129243831650000000" />
+<file name="errors.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825540000000" remote="129243831740000000" />
+<file name="fetchmodes.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825550000000" remote="129243831740000000" />
+<file name="fetchmode_object.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825550000000" remote="129243831750000000" />
+<file name="include.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825550000000" remote="129243831750000000" />
+<file name="limit.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825570000000" remote="129243831750000000" />
+<file name="numcols.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825540000000" remote="129243831760000000" />
+<file name="numrows.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825530000000" remote="129243831760000000" />
+<file name="prepexe.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825540000000" remote="129243831760000000" />
+<file name="rfc822.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825530000000" remote="129243831760000000" />
+<file name="run.cvs" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825550000000" remote="129243831770000000" />
+<file name="sequences.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825540000000" remote="129243831770000000" />
+<file name="simplequery.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825560000000" remote="129243831770000000" />
+<file name="skipif.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825570000000" remote="129243831780000000" />
+<file name="smtp_error.phpt" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825560000000" remote="129243831780000000" />
+<file name="transactions.inc" server="cheaplocaldeals.com:222//var/www/beta/" local="129242825540000000" remote="129243831780000000" />
+</dwsync>

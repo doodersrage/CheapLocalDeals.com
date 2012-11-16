@@ -1,0 +1,12 @@
+Sitemap: http://www.cheaplocaldeals.com/sitemap.xml
+Sitemap: http://www.cheaplocaldeals.com/sitemaps/city_categories_sitemap.xml
+User-agent: *
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /beta/
+Disallow: /tweak/
+Disallow: /affiliates/
+Disallow: /stuff/
+Disallow: /tools/
+Disallow: /advertiser_admin/
+Disallow: /customer_admin/
