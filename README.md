@@ -10,3 +10,5 @@ For geolocation IP lookup, a single flat-file text document was used and updated
 Memcache is referenced throughout and will cause the website to fail to load if it is not installed onto your server.
 
 It also includes a web-based administrator panel, an affiliate system, and an XML API.
+
+CheapLocalDeals.com was retired in 2012, two years after I quit the employer I was working for that commissioned the project. No updates were completed for this project after around June 2010. The project was a abandoned and the client decided to give me back the code I had developed rather than continuing to pay the nearly $200 per-month cost of hosting the large locally targeted website.
